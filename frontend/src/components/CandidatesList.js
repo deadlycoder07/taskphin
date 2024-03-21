@@ -1,0 +1,50 @@
+import React, { useEffect, useState } from 'react';
+import CandidatesListCardInfo from './CandidateListCardInfo';
+import CandidateLoader from './CadidateLoader';
+import axios from 'axios';
+
+const CandidatesList = ({ candidates, onUpdate }) => {
+  const [loading,setLoading] = useState(true);
+  const [candidatesData, setCandidatesData] = useState({
+    count: 0,
+    candidates: [],
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/v1/candidates');
+        setCandidatesData(response.data.data);
+        console.log(candidatesData)
+        setTimeout(5000);
+        setLoading(false) // Assuming the API response structure matches your example
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  return (
+    <div className="space-y-2">
+      {
+        loading ?
+         <CandidateLoader/> 
+         :
+          candidatesData.candidates.map((candidate) =>(
+            <CandidatesListCardInfo candidateData={candidate}/>
+          ))
+      }
+      </div> 
+                   
+
+
+    // <div>
+    //   <CandidateLoader/>
+    // </div>
+  );
+};
+
+export default CandidatesList;
