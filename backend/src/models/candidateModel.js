@@ -17,7 +17,7 @@ const addCandidate = async (candidateData) => {
         const score = (nodeExperience == 1 ? 1 : nodeExperience == 2 ? 2 : 3) + (reactExperience == 1 ? 1 : reactExperience == 2 ? 2 : 3);
         const skills = {
             node_experience: nodeExperience == 1 ? "Less than 1 year" : nodeExperience == 2 ? "1-2 years" : "Greater than 2 years" ,
-            react_experience: reactExperience == 1 ? "Less than 1 year" : nodeExperience == 2 ? "1-2 years" : "Greater than 2 years"
+            react_experience: reactExperience == 1 ? "Less than 1 year" : reactExperience == 2 ? "1-2 years" : "Greater than 2 years"
         }
         const status = "AWAITING_REVIEW";
         const result = await pool.query(
