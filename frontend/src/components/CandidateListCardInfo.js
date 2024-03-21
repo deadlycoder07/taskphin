@@ -44,8 +44,8 @@ const CandidatesListCardInfo = ({candidateData}) => {
           </div>
           <div className="flex-1 space-y-2 p-8 text-gray-500" > 
             <p><span className='text-base font-sans font-extrabold'>Work Experience:</span> {candidateData.work_experience} years</p>
-            <p><span className='text-base font-sans font-extrabold'>React Experience: </span>{candidateData.skills.react_experience} years</p>
-            <p><span className='text-base font-sans font-extrabold'>Node Experience:</span> {candidateData.skills.node_experience} years</p>
+            <p><span className='text-base font-sans font-extrabold'>React Experience: </span>{candidateData.skills.react_experience}</p>
+            <p><span className='text-base font-sans font-extrabold'>Node Experience:</span> {candidateData.skills.node_experience} </p>
             <p><span className='text-base font-sans font-extrabold'>Score:</span>{candidateData.score}</p>
 
           </div>
