@@ -101,7 +101,7 @@ const CandidatesForm = () => {
           </select>
         </div>
         <div>
-          <label for="nodeExperience" class="block mb-2 text-sm font-medium text-white-900 dark:text-black">Work Experience in years (ReactJs)</label>
+          <label for="nodeExperience" class="block mb-2 text-sm font-medium text-white-900 dark:text-black">Work Experience in years (NodeJs)</label>
           <select name="nodeExperience"
             value={formData.nodeExperience}
             onChange={handleChange} id="nodeExperience" class="bg-white-50 border border-white-300 text-white-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-white-600 dark:placeholder-white-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
