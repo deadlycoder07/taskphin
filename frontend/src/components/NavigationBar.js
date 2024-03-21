@@ -7,9 +7,6 @@ const NavigationBar = () => {
                 <h1 className="px-10 text-3xl gradient-text">
                     TaskPhin
                 </h1>
-
-
-                {/* Add more navigation items here */}
             </div>
         </nav>
     );

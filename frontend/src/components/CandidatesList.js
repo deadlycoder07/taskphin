@@ -17,7 +17,7 @@ const CandidatesList = ({ candidates, onUpdate }) => {
         setCandidatesData(response.data.data);
         console.log(candidatesData)
         setTimeout(5000);
-        setLoading(false) // Assuming the API response structure matches your example
+        setLoading(false)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -38,12 +38,6 @@ const CandidatesList = ({ candidates, onUpdate }) => {
           ))
       }
       </div> 
-                   
-
-
-    // <div>
-    //   <CandidateLoader/>
-    // </div>
   );
 };
 

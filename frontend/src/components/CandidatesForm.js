@@ -25,18 +25,16 @@ const CandidatesForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/candidates', formData);
-      // Handle success
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/candidates`, formData);
       console.log(response.data);
       setToastMessage('Candidate added successfully!');
       setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000); // Hide the toast after 3 seconds
+      setTimeout(() => setShowToast(false), 3000); 
     } catch (error) {
       console.error('There was an error!', error);
-      // Handle error
       setToastMessage('An error occurred!');
       setShowToast(true);
-      setTimeout(() => setShowToast(false), 3000); // Hide the toast after 3 seconds
+      setTimeout(() => setShowToast(false), 3000); 
     }
     setFormData({
       firstName: '',
@@ -49,7 +47,7 @@ const CandidatesForm = () => {
       nodeExperience: '',
       email: '',
       expectedSalary: '',
-    }); // Reset form
+    });
   };
 
   return (
