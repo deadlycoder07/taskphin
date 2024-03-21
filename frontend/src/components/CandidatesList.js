@@ -13,7 +13,7 @@ const CandidatesList = ({ candidates, onUpdate }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/candidates');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/candidates`);
         setCandidatesData(response.data.data);
         console.log(candidatesData)
         setTimeout(5000);
